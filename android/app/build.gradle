@@ -1,0 +1,42 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.my_new_app"
+    compileSdk = 34 // עדכון לגרסת ה-SDK המותקנת והמתאימה
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8" // עדכון פורמט נכון עבור גרסת Kotlin
+    }
+
+    defaultConfig {
+        // Application ID ייחודי לאפליקציה
+        applicationId = "com.example.my_new_app"
+        // גרסת ה-minSdk מוגדרת לערך מתאים
+        minSdkVersion 21
+        // גרסת ה-targetSdk מוגדרת לערך עדכני
+        targetSdkVersion 33
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildTypes {
+        release {
+            // חתימה עם המפתחות של debug עד שייחתמו מפתחות release
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}

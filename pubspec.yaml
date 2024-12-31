@@ -1,0 +1,41 @@
+name: psycho_lexicon
+description: "An innovative Flutter app for enhancing Hebrew vocabulary with quizzes and practice stages."
+
+publish_to: 'none' # This app is not published to pub.dev or elsewhere
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.0.15
+  intl: ^0.18.0
+  confetti: ^0.7.0
+  in_app_purchase: ^3.2.0
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.9.3
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon.png"
+  remove_alpha_ios: true
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/quiz_data_he.json
+    - assets/quiz_data_en.json
+    - assets/flags/israel.png
+    - assets/flags/usa.png
